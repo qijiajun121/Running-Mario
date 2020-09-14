@@ -77,6 +77,8 @@ public class window extends JFrame {
         }.start();
     }
 
+
+
     public void paint(Graphics gra){
         BufferedImage bf = (BufferedImage) this.createImage(this.getWidth(), this.getHeight());
         Graphics gr = bf.getGraphics();

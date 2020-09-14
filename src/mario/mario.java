@@ -1,6 +1,7 @@
 package mario;
 
 import object.object;
+import object.cBrick;
 import ui.window;
 
 import javax.swing.*;
@@ -123,6 +124,13 @@ public class mario extends Thread {
                 case "Down":
                     rec1 = new Rectangle(obj.x, obj.y-2, obj.width, obj.height);
                     break;
+            }
+
+            if(dir.equals("Up")&&rec.intersects(rec1)){
+                //System.out.println(obj.getClass());
+                if(obj.getClass() == cBrick.class){
+                    obj.img = new ImageIcon("image/cBrick1.png").getImage();
+                }
             }
 
             if(rec.intersects(rec1)){
